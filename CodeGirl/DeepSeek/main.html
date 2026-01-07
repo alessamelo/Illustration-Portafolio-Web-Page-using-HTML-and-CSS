@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ablue Berry Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f5f0;
+            color: #5a4a42;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: radial-gradient(#e8dfd8 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+
+        .cozy-container {
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            background-color: #fffefc;
+            border-radius: 24px;
+            box-shadow: 
+                0 10px 30px rgba(175, 150, 130, 0.1),
+                0 1px 8px rgba(175, 150, 130, 0.05),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cozy-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #d4a574, #e8c8a9, #d4a574);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .cozy-container::after {
+            content: "";
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23e8c8a9"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .title-container {
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: #8b7355;
+            letter-spacing: -0.5px;
+            line-height: 1;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(139, 115, 85, 0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-title::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 10%;
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4a574, transparent);
+            border-radius: 3px;
+        }
+
+        .main-title .first-word {
+            color: #a78b6f;
+        }
+
+        .main-title .second-word {
+            color: #7d6b58;
+        }
+
+        .subtitle {
+            font-size: 3.2rem;
+            font-weight: 300;
+            color: #b8a28a;
+            letter-spacing: 4px;
+            margin: 25px 0;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        .subtitle::before,
+        .subtitle::after {
+            content: "•";
+            color: #d4a574;
+            font-size: 2rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .subtitle::before {
+            left: -5px;
+        }
+
+        .subtitle::after {
+            right: -5px;
+        }
+
+        .year {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #5a4a42;
+            background: linear-gradient(to right, #f5e9dd, #e8d4c0);
+            display: inline-block;
+            padding: 12px 35px;
+            border-radius: 50px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            box-shadow: 
+                0 4px 8px rgba(139, 115, 85, 0.15),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(139, 115, 85, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .year::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.7s;
+        }
+
+        .year:hover::before {
+            left: 100%;
+        }
+
+        /* Navigation Buttons */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cozy-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 180px;
+            box-shadow: 
+                0 6px 12px rgba(139, 115, 85, 0.15),
+                inset 0 1px 3px rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .cozy-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+
+        .cozy-button .button-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cozy-button i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Button styles */
+        .btn-works {
+            background: linear-gradient(135deg, #e8d4c0, #d4a574);
+            color: #5a4a42;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+        }
+
+        .btn-works:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 20px rgba(139, 115, 85, 0.25),
+                inset 0 1px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-works:hover i {
+            transform: translateX(3px);
+        }
+
+        .btn-prices {
+            background: linear-gradient(135deg, #f5e9dd, #e8c8a9);
+            color: #5a4a42;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+        }
+
+        .btn-prices:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 20px rgba(139, 115, 85, 0.25),
+                inset 0 1px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-prices:hover i {
+            transform: scale(1.1);
+        }
+
+        .btn-about {
+            background: linear-gradient(135deg, #e8c8a9, #c9a179);
+            color: #5a4a42;
+            border: 1px solid rgba(139, 115, 85, 0.2);
+        }
+
+        .btn-about:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 12px 20px rgba(139, 115, 85, 0.25),
+                inset 0 1px 3px rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-about:hover i {
+            transform: rotate(10deg);
+        }
+
+        /* Decorative elements */
+        .decorative-leaf {
+            position: absolute;
+            color: #d4a574;
+            font-size: 1.8rem;
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        .leaf-1 { top: 30px; left: 30px; transform: rotate(-15deg); }
+        .leaf-2 { top: 40px; right: 40px; transform: rotate(25deg); }
+        .leaf-3 { bottom: 60px; left: 50px; transform: rotate(10deg); }
+        .leaf-4 { bottom: 120px; right: 60px; transform: rotate(-20deg); }
+
+        /* Back button styling for other pages */
+        .back-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: linear-gradient(135deg, #e8d4c0, #d4a574);
+            color: #5a4a42;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(139, 115, 85, 0.15);
+            z-index: 10;
+        }
+
+        .back-button:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 6px 12px rgba(139, 115, 85, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title { font-size: 3.5rem; }
+            .subtitle { font-size: 2.5rem; letter-spacing: 3px; }
+            .year { font-size: 2.2rem; padding: 10px 25px; margin-bottom: 40px; }
+            .cozy-container { padding: 30px 20px; }
+            .nav-buttons { gap: 20px; }
+            .cozy-button { min-width: 160px; padding: 14px 24px; }
+            .back-button { top: 20px; left: 20px; padding: 8px 16px; }
+        }
+
+        @media (max-width: 680px) {
+            .nav-buttons { flex-direction: column; align-items: center; }
+            .cozy-button { width: 100%; max-width: 300px; }
+        }
+
+        @media (max-width: 480px) {
+            .main-title { font-size: 2.8rem; }
+            .subtitle { font-size: 2rem; letter-spacing: 2px; }
+            .year { font-size: 1.8rem; margin-bottom: 30px; }
+            .decorative-leaf { display: none; }
+            .cozy-button { padding: 12px 20px; font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cozy-container">
+        <div class="title-container">
+            <div class="decorative-leaf leaf-1"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-2"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-3"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-4"><i class="fas fa-leaf"></i></div>
+            
+            <h1 class="main-title">
+                <span class="first-word">Ablue</span> 
+                <span class="second-word">berry</span>
+            </h1>
+            
+            <div class="subtitle">Portafolio</div>
+            
+            <div class="year">2025</div>
+            
+            <div class="nav-buttons">
+                <!-- Updated: Changed button to link -->
+                <a href="works.html" class="cozy-button btn-works">
+                    <div class="button-content">
+                        <i class="fas fa-palette"></i>
+                        <span>Previous Works</span>
+                    </div>
+                </a>
+                
+                <button class="cozy-button btn-prices">
+                    <div class="button-content">
+                        <i class="fas fa-tags"></i>
+                        <span>Prices</span>
+                    </div>
+                </button>
+                
+                <button class="cozy-button btn-about">
+                    <div class="button-content">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.main-title');
+            const subtitle = document.querySelector('.subtitle');
+            const year = document.querySelector('.year');
+            const buttons = document.querySelectorAll('.cozy-button');
+            
+            // Reset initial state
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(20px)';
+            subtitle.style.opacity = '0';
+            subtitle.style.transform = 'translateY(20px)';
+            year.style.opacity = '0';
+            year.style.transform = 'translateY(20px)';
+            
+            buttons.forEach(button => {
+                button.style.opacity = '0';
+                button.style.transform = 'translateY(20px)';
+            });
+            
+            // Animate elements
+            setTimeout(() => {
+                title.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                title.style.opacity = '1';
+                title.style.transform = 'translateY(0)';
+            }, 300);
+            
+            setTimeout(() => {
+                subtitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                subtitle.style.opacity = '1';
+                subtitle.style.transform = 'translateY(0)';
+            }, 600);
+            
+            setTimeout(() => {
+                year.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                year.style.opacity = '1';
+                year.style.transform = 'translateY(0)';
+            }, 900);
+            
+            setTimeout(() => {
+                buttons.forEach((button, index) => {
+                    setTimeout(() => {
+                        button.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        button.style.opacity = '1';
+                        button.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ablue Berry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">  
+</head>
+<body>
+    <a href="main.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Portfolio
+    </a>
+
+    <div class="about-container">
+        <div class="about-decorative about-leaf-1"><i class="fas fa-leaf"></i></div>
+        <div class="about-decorative about-leaf-2"><i class="fas fa-leaf"></i></div>
+        
+        <div class="page-header">
+            <h1 class="page-title">Meet Ale!</h1>
+            <p class="about-text" style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+                Hi there! I'm Alessa, a 22-year-old artist and computer science student who loves bringing creativity to both canvas and code.
+            </p>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="about-section">
+            <h2 class="section-title">
+                <i class="fas fa-user"></i>
+                About Me
+            </h2>
+            
+            <p class="about-text">
+                I'm 22 years old and passionate about drawing, painting, and producing digital art. 
+                When I'm not creating, you can find me reading mangas, watching movies, and enjoying anime. 
+                These hobbies fuel my creativity and inspire my artwork.
+            </p>
+            
+            <p class="about-text">
+                In my Computer Science degree, I've learned programming languages like Python, C, and HTML. 
+                I love combining my technical skills with my artistic passion to create unique digital experiences.
+            </p>
+            
+            <div class="pet-section">
+                <div class="pet-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <div class="pet-info">
+                    <h4>Meet Minimi! 🐾</h4>
+                    <p>My adorable pet who keeps me company during long art sessions. They're my little creative companion!</p>
+                </div>
+            </div>
+            <div class="media-section">
+                <div class="media-item">
+                <image src="Images/minimi.jpg" style="width: 370px;">  </image>
+                </div>
+                <div class="media-item">
+                <image src="Images/minimi1.jpg" style="width: 370px;">  </image>
+                </div>
+        </div>
+        </div>
+
+        <!-- Fun Facts Section -->
+        <div class="about-section">
+            <h2 class="section-title fun-facts">
+                <i class="fas fa-star"></i>
+                Fun Facts About Me
+            </h2>
+            
+            <div class="fun-facts-list">
+                <div class="fun-fact-item">
+                    <i class="fas fa-pepper-hot"></i>
+                    <p>I love spicy food - the hotter, the better!</p>
+                </div>
+                
+                <div class="fun-fact-item">
+                    <i class="fas fa-palette"></i>
+                    <p>My favorite colors are black and pink</p>
+                </div>
+                
+                <div class="fun-fact-item">
+                    <i class="fas fa-music"></i>
+                    <p>I play the bass guitar in my free time</p>
+                </div>
+                
+                <div class="fun-fact-item">
+                    <i class="fas fa-film"></i>
+                    <p>Anime and movies are my go-to entertainment</p>
+                </div>
+                
+                <div class="fun-fact-item">
+                    <i class="fas fa-code"></i>
+                    <p>I enjoy both traditional art and coding</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="about-section">
+            <h2 class="section-title">
+                <i class="fas fa-tools"></i>
+                My Skills
+            </h2>
+            
+            <p class="about-text">Here are some of the skills I've developed through both my art practice and computer science studies:</p>
+            
+            <div class="skills-container">
+                <div class="skill-tag">Digital Painting</div>
+                <div class="skill-tag">Character Design</div>
+                <div class="skill-tag">Traditional Art</div>
+                <div class="skill-tag">Python Programming</div>
+                <div class="skill-tag">C Programming</div>
+                <div class="skill-tag">HTML/CSS</div>
+                <div class="skill-tag">UI/UX Design</div>
+                <div class="skill-tag">Bass Guitar</div>
+            </div>
+        </div>
+
+        <!-- Media Section -->
+        <div class="about-section">
+            <h2 class="section-title">
+                <i class="fas fa-headphones"></i>
+                My Creative Space
+            </h2>
+            
+            <p class="about-text">Here's a peek into what I listen to and watch while working on my projects:</p>
+            
+            <div class="media-section">
+                <div class="media-item">
+                    <h4><i class="fas fa-music"></i> Work Jam</h4>
+                    <p>This is what I listen to while working - helps me stay focused and creative!</p>
+                    
+                    <div class="audio-player">
+                        <audio src="audio/jujutsu.mp3" controls></audio>
+                    </div>
+                    
+                    <p class="video-caption">Jujutsu Kaisen OST - Perfect for coding and drawing sessions!</p>
+                </div>
+                
+                <div class="media-item">
+                    <h4><i class="fas fa-video"></i> Favorite Clip</h4>
+                    <p>One of my favorite movie/anime clips that inspires my work:</p>
+                    
+                    <div class="video-player">
+                        <video width="320" src="Videos/AdoxMiku.mp4" type="video/mp4" controls poster="Images/dracu.jpg"></video>
+                    </div>
+                    
+                    <p class="video-caption">Ado x Miku collaboration - Always gets my creative juices flowing!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer">
+            <p>Want to collaborate or just say hi? <a href="https://www.instagram.com/a.blueberry_art_/">Send me a message!</a></p>
+            <p class="footer-note">
+                <i class="fas fa-heart" style="color: #e75480;"></i> Created by Alessa - Girls4Code 2025
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.page-title');
+            const intro = document.querySelector('.about-text');
+            const sections = document.querySelectorAll('.about-section');
+            const funFacts = document.querySelectorAll('.fun-fact-item');
+            const skillTags = document.querySelectorAll('.skill-tag');
+            const mediaItems = document.querySelectorAll('.media-item');
+            
+            // Reset initial state
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(20px)';
+            intro.style.opacity = '0';
+            intro.style.transform = 'translateY(20px)';
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+            });
+            
+            // Animate elements
+            setTimeout(() => {
+                title.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                title.style.opacity = '1';
+                title.style.transform = 'translateY(0)';
+            }, 300);
+            
+            setTimeout(() => {
+                intro.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                intro.style.opacity = '1';
+                intro.style.transform = 'translateY(0)';
+            }, 500);
+            
+            // Animate sections
+            setTimeout(() => {
+                sections.forEach((section, index) => {
+                    setTimeout(() => {
+                        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 700);
+            
+            // Animate fun facts with delay
+            setTimeout(() => {
+                funFacts.forEach((fact, index) => {
+                    setTimeout(() => {
+                        fact.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        fact.style.opacity = '1';
+                        fact.style.transform = 'translateX(0)';
+                    }, index * 100);
+                });
+            }, 1200);
+            
+            // Animate skill tags
+            setTimeout(() => {
+                skillTags.forEach((tag, index) => {
+                    setTimeout(() => {
+                        tag.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        tag.style.opacity = '1';
+                        tag.style.transform = 'translateY(0)';
+                    }, index * 80);
+                });
+            }, 1400);
+            
+            // Animate media items
+            setTimeout(() => {
+                mediaItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 1600);
+        });
+        
+        // Add hover effect to audio/video players
+        const mediaPlayers = document.querySelectorAll('.audio-player, .video-player');
+        mediaPlayers.forEach(player => {
+            player.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            player.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

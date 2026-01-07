@@ -1,0 +1,22 @@
+    <!-- Quote Section -->
+    <div style="background: linear-gradient(135deg, rgba(168, 198, 216, 0.1), rgba(212, 232, 240, 0.1)); border-radius: 12px; padding: 25px; margin-top: 10px; border: 1px solid rgba(168, 198, 216, 0.3);">
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+            <div style="flex-shrink: 0; color: #a8c6d8; font-size: 2rem;">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <div>
+                <p style="color: #5a7b8c; font-size: 1.1rem; line-height: 1.7; margin: 0; font-style: italic;">
+                    The raccoon characters have become recognizable mascots that effectively communicate 
+                    the intersection of mathematics and computer science to prospective students. Their 
+                    adoption in the Christmas event marked their successful integration into the 
+                    university's visual identity.
+                </p>
+                <div style="display: flex; align-items: center; gap: 10px; margin-top: 15px;">
+                    <div style="width: 40px; height: 2px; background: #a8c6d8;"></div>
+                    <span style="color: #7d9aac; font-size: 0.9rem; font-weight: 500;">
+                        Event Coordinator, Yachay Tech University
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
