@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ablue Berry Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="cozy-container">
+        <div class="title-container">
+            <div class="decorative-leaf leaf-1"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-2"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-3"><i class="fas fa-leaf"></i></div>
+            <div class="decorative-leaf leaf-4"><i class="fas fa-leaf"></i></div>
+            
+            <h1 class="main-title">
+                <span class="first-word">Ablue</span> 
+                <span class="second-word">Berry</span>
+            </h1>
+            
+            <div class="subtitle">Portafolio</div>
+            
+            <div class="year">2025</div>
+            
+            <div class="nav-buttons">
+                <!-- Updated: Changed button to link -->
+                <a href="works.html" class="cozy-button btn-works">
+                    <div class="button-content">
+                        <i class="fas fa-palette"></i>
+                        <span>Previous Works</span>
+                    </div>
+                </a>
+                
+                <a href="prices.html" class="cozy-button btn-prices">
+                    <div class="button-content">
+                        <i class="fas fa-tags"></i>
+                        <span>Prices</span>
+                    </div>
+                </a>
+                
+                <a href="aboutme.html" class="cozy-button btn-about">
+                    <div class="button-content">
+                        <i class="fas fa-user"></i>
+                        <span>About Me</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.querySelector('.main-title');
+            const subtitle = document.querySelector('.subtitle');
+            const year = document.querySelector('.year');
+            const buttons = document.querySelectorAll('.cozy-button');
+            
+            // Reset initial state
+            title.style.opacity = '0';
+            title.style.transform = 'translateY(20px)';
+            subtitle.style.opacity = '0';
+            subtitle.style.transform = 'translateY(20px)';
+            year.style.opacity = '0';
+            year.style.transform = 'translateY(20px)';
+            
+            buttons.forEach(button => {
+                button.style.opacity = '0';
+                button.style.transform = 'translateY(20px)';
+            });
+            
+            // Animate elements
+            setTimeout(() => {
+                title.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                title.style.opacity = '1';
+                title.style.transform = 'translateY(0)';
+            }, 300);
+            
+            setTimeout(() => {
+                subtitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                subtitle.style.opacity = '1';
+                subtitle.style.transform = 'translateY(0)';
+            }, 600);
+            
+            setTimeout(() => {
+                year.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                year.style.opacity = '1';
+                year.style.transform = 'translateY(0)';
+            }, 900);
+            
+            setTimeout(() => {
+                buttons.forEach((button, index) => {
+                    setTimeout(() => {
+                        button.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                        button.style.opacity = '1';
+                        button.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

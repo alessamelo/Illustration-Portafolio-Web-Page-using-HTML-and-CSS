@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Works - Ablue Berry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="works.css"> 
+</head>
+<body>
+    <a href="main.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Portfolio
+    </a>
+
+    <div class="works-container">
+        <div class="decorative-leaf leaf-1"><i class="fas fa-leaf"></i></div>
+        <div class="decorative-leaf leaf-2"><i class="fas fa-leaf"></i></div>
+        
+        <div class="page-header">
+            <h1 class="page-title">Previous Works</h1>
+            <p class="page-subtitle">A collection of my recent projects and creative endeavors. Each piece represents a unique challenge and solution.</p>
+        </div>
+
+        <div class="works-grid">
+            <!-- Work 1 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">Cozy Café Branding</h3>
+                    <p class="work-description">Complete brand identity for a local café including logo, packaging, and interior design elements that evoke warmth and comfort.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">Branding</span>
+                        <span class="work-tag">Illustration</span>
+                        <span class="work-tag">Print Design</span>
+                    </div>
+                    <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Work 2 -->
+            <div class="work-card">
+            <div class="work-image">
+                <img src="Images/RacoonFinal1.png" alt="Yachay Math School Character Design" class="work-img">
+            </div>
+            <div class="work-content">
+                <h3 class="work-title">Character for Yachay Math School</h3>
+                <p class="work-description">Designed a character/logo that represents the intersection of mathematics and computer science degrees.</p>
+                <div class="work-tags">
+                    <span class="work-tag">Character Design</span>
+                    <span class="work-tag">Branding</span>
+                    <span class="work-tag">Digital Illustration</span>
+                </div>
+                <a href="Previous_Works/mapache.html" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+            <!-- Work 3 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">Children's Book Illustration</h3>
+                    <p class="work-description">Full-color illustrations for a children's book about friendship and adventure in a magical forest.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">Illustration</span>
+                        <span class="work-tag">Digital Art</span>
+                        <span class="work-tag">Storytelling</span>
+                    </div>
+                    <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Work 4 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">Wellness App Design</h3>
+                    <p class="work-description">Mobile application design for a mental wellness platform with soothing color palettes and intuitive navigation.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">App Design</span>
+                        <span class="work-tag">UI/UX</span>
+                        <span class="work-tag">Prototyping</span>
+                    </div>
+                    <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Work 5 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">Product Photography Series</h3>
+                    <p class="work-description">Lifestyle photography for a sustainable home goods brand, highlighting natural materials and craftsmanship.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">Photography</span>
+                        <span class="work-tag">Styling</span>
+                        <span class="work-tag">Art Direction</span>
+                    </div>
+                    <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Work 6 -->
+            <div class="work-card">
+                <div class="work-image">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div class="work-content">
+                    <h3 class="work-title">Travel Guide Design</h3>
+                    <p class="work-description">Illustrated travel guide for a coastal region, featuring maps, recommendations, and local insights.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">Editorial Design</span>
+                        <span class="work-tag">Illustration</span>
+                        <span class="work-tag">Typography</span>
+                    </div>
+                    <a href="#" class="work-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- If no works exist yet -->
+        <!-- <div class="empty-works">
+            <i class="fas fa-palette"></i>
+            <h3>Works in Progress</h3>
+            <p>My portfolio is currently being updated with new projects. Check back soon!</p>
+        </div> -->
+    </div>
+
+    <script>
+        // Animation for work cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const workCards = document.querySelectorAll('.work-card');
+            
+            workCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 300 + (index * 150));
+            });
+        });
+    </script>
+</body>
+</html>
